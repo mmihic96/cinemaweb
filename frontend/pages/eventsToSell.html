@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Projekcije</title>
+    <link rel="stylesheet" type="text/css" href="../styles/navBar.css">
+    <link rel="stylesheet" type="text/css" href="../styles/eventsToSellPage.css">
+    <link rel="icon" href="../images/projectimage.jpg">
+    <script>
+        var manager = document.cookie.startsWith('manager');
+        var seller = document.cookie.startsWith('seller');
+        if (!manager && !seller) {
+            window.location.href = "401.html"
+        }
+    </script>
+</head>
+
+<body onkeyup='checkKey(event)'>
+    <!-- NAVIGATION -->
+    <div id="navBar">
+        <ul>
+            <li>
+                <a class="active" id="events" href="eventsToSell.html">Projekcije</a>
+            </li>
+            <li>
+                <a id="bills" href="bills.html">Računi</a>
+            </li>
+            <li>
+                <a id="allEvents" href="allEvents.html">Sve projekcije</a>
+            </li>
+            <li>
+                <a id="movies" href="movies.html">Filmovi</a>
+            </li>
+            <li>
+                <a id="users" href="users.html">Korisnici</a>
+            </li>
+            <li class="dropdown">
+                <div class='loginData'>
+                    <img class="userAvatar" id="userAvatar" src="#">
+                    <a id="username" class="dropbtn"> </a>
+                </div>
+                <div class="dropdown-content">
+                    <a onclick="logout()">Odjavi se</a>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- END NAVIGATIOn -->
+    <input type="text" class='search' id="eventsToSellSearch" onkeyup="search()" placeholder="Traži po imenu, žanru i sali..."
+        title="Unesi ime filma, žanr ili salu">
+    <!-- PAGE CONTENT -->
+    <div id='pageContent' class="pageContent">
+        <ul id='eventsToSell'>
+            
+        </ul>
+    </div>
+    <div></div>
+    <!-- END MOVIE DETAILS -->
+    <!-- TICKET MODAL -->
+    <div id="ticketModal" class="modal">
+        <div class="modal-content">
+            <h2 style="text-align: center" id='eventName'></h2>
+            <p id="eventHall"></p>
+            <p id="eventDateTime"></p>
+            <br>
+            <label>Unesite broj karata:</label>
+            <br>
+            <input id='numberOfTickets' type="number" min="0" placeholder="Broj karata..">
+            <label id="eventPrice"></label>
+            <br>
+            <button class="modalButton" onclick="closeModal('ticketModal')">Odustani</button>
+            <button id='buyTickets' class="modalButton" onclick="buy()">Kupi</button>
+        </div>
+    </div>
+    <!-- END TICKET MODAL -->
+    <script src="../scripts/eventsToSellController.js"></script>
+</body>
+
+</html>

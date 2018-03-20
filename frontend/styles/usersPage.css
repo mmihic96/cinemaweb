@@ -1,0 +1,162 @@
+.content {
+    width: 100%;
+    box-shadow: 1px 1px 1px 2px rgb(176, 177, 177);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+table {
+    color: rgb(102, 101, 101);
+    text-align: center;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+th {
+    color: rgb(218, 33, 33);
+}
+
+.deleteIcon {
+    width: 18px;
+}
+
+.editIcon {
+    margin-right: 20px;
+    width: 25px;
+}
+
+.addButton {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    float: right;
+    background-color: rgb(218, 33, 33);
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+}
+
+.addButton:focus {
+    outline-style: none;
+}
+
+.addButton:active {
+    transform: translateY(1px);
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 10%;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    color: rgb(218, 33, 33);
+}
+
+@media (max-height: 700px) {
+    .modal {
+        padding: 0;
+    }
+    .modal .modal-content{
+        height: 93%;
+    }
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height: 65%;
+}
+
+.modalButton {
+    float: right;
+    font-size: 12px;
+    margin: 2px;
+    padding: 15px 32px;
+    background-color: rgb(218, 33, 33);
+    color: white;
+    border: none;
+    position: relative;
+    vertical-align: bottom;
+    top: 20px;
+}
+
+.modalButton:hover,
+.modalButton:focus {
+    background-color: dodgerblue;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+select {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid dodgerblue;
+    box-sizing: border-box;
+}
+
+input {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid dodgerblue;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: 2px solid dodgerblue;
+}
+
+.inputFile {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid dodgerblue;
+    box-sizing: border-box;
+}
+
+.inputFile:focus {
+    outline: 2px solid dodgerblue;
+}
+
+.avatarImage {
+    width: 90px;
+    height: 90px;
+}

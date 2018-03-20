@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Računi</title>
+    <link rel="stylesheet" type="text/css" href="../styles/navBar.css">
+    <link rel="stylesheet" type="text/css" href="../styles/billsPage.css">
+    <link rel="icon" href="../images/projectimage.jpg">
+    <script>
+        var seller = document.cookie.startsWith('seller');
+        if (!seller) {
+            window.location.href = "401.html"
+        }
+    </script>
+</head>
+
+<body>
+    <div id="navBar">
+        <ul>
+            <li>
+                <a id="events" href="eventsToSell.html">Projekcije</a>
+            </li>
+            <li>
+                <a class="active" id="movies" href="bills.html">Računi</a>
+            </li>
+            <li class="dropdown">
+                <div class='loginData'>
+                    <img class="userAvatar" id="userAvatar" src="#">
+                    <a id="username" class="dropbtn"> </a>
+                </div>
+                <div class="dropdown-content">
+                    <a onclick="logout()">Odjavi se</a>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <input type="text" class='search' id="billsSearch" onkeyup="search()" placeholder="Traži po imenu, žanru, prodavcu..." title="Unesi ime, žanr, prodavca">
+    <div id='content' class="content">
+        <table id='billsTable'>
+            <tr>
+                <th>Vreme kupovine</th>
+                <th>Za projekciju</th>
+                <th>U sali</th>
+                <th>Broj kupljenih karata</th>
+                <th>Ukupna cena</th>
+                <th>Prodavac</th>
+            </tr>
+        </table>
+    </div>
+    <script src='../scripts/billsController.js'></script>
+</body>
+
+</html>

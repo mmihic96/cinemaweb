@@ -1,0 +1,152 @@
+.pageContent {
+    display: block;
+    position: relative;
+}
+
+.pageContent li {
+    list-style-type: none !important;
+}
+
+.event {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 50%;
+    box-shadow: 1px 1px 1px 2px rgb(176, 177, 177);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    margin-left: -40px;
+}
+
+.pageContent img {
+    width: 200px;
+    height: 300px;
+}
+
+.eventDesc {
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.eventDesc p {
+    margin-top: 10%;
+}
+
+.movieDetail {
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 5px;
+    width: 50%;
+    height:300px;
+    box-shadow: 1px 1px 1px 2px rgb(176, 177, 177);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.movieDetail p {
+    margin: 0px;
+    margin-top: 1%;
+}
+
+button {
+    font-size: 12px;
+    background-color: rgb(218, 33, 33);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+button:focus {
+    background-color: dodgerblue;
+    outline-color: dodgerblue;
+}
+
+li .buyTicketBtn {
+    position: relative;
+    left: 20%;
+    bottom: 0px;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    color: rgb(218, 33, 33);
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.modalButton {
+    float: right;
+    font-size: 12px;
+    margin: 2px;
+    padding: 15px 32px;
+    background-color: rgb(218, 33, 33);
+    color: white;
+    border: none;
+    position: relative;
+    vertical-align: bottom;
+    top: -35px;
+}
+
+.modalButton:hover,
+.modalButton:focus {
+    background-color: dodgerblue;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+select {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid dodgerblue;
+    box-sizing: border-box;
+}
+
+input {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid dodgerblue;
+    box-sizing: border-box;
+}
+
+.eventLI {
+    display: flex;
+    flex-direction: row;
+}

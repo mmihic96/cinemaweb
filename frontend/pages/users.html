@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Korsnici</title>
+    <link rel="stylesheet" type="text/css" href="../styles/navBar.css">
+    <link rel="stylesheet" type="text/css" href="../styles/usersPage.css">
+    <link rel="icon" href="../images/projectimage.jpg">
+    <script>
+        var manager = document.cookie.startsWith('manager');
+        if (!manager) {
+            window.location.href = "401.html"
+        }
+    </script>
+</head>
+
+<body onkeyup='checkKey(event)'>
+    <div id="navBar">
+        <ul>
+            <li>
+                <a id="events" href="eventsToSell.html">Projekcije</a>
+            </li>
+            <li>
+                <a id="allEvents" href="allEvents.html">Sve projekcije</a>
+            </li>
+            <li>
+                <a id="movies" href="movies.html">Filmovi</a>
+            </li>
+            <li>
+                <a class="active" id="users" href="users.html">Korisnici</a>
+            </li>
+            <li class="dropdown">
+                <div class='loginData'>
+                    <img class="userAvatar" id="userAvatar" src="#">
+                    <a id="username" class="dropbtn"> </a>
+                </div>
+                <div class="dropdown-content">
+                    <a onclick="logout()">Odjavi se</a>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <input type="text" class='search' id="userSearch" onkeyup="search()" placeholder="Traži po imenu, prezimenu, korisničkom imenu, ulozi..."
+        title="Unesi ime, prezime, korisničko ime, ulogu">
+    <div id="content" class="content">
+        <table id="usersTable">
+            <tr>
+                <th>Avatar</th>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>Korisničko ime</th>
+                <th>Šifra</th>
+                <th>Uloga</th>
+                <th>Upravljanje</th>
+            </tr>
+        </table>
+    </div>
+    <button class="addButton" id="addBtn" onclick="openModal('addModal')" onkeyup="checkKey(event)">+</button>
+    <!-- ADD MODAL -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <h2 style="text-align: center">Dodavanje korisnika</h2>
+            <label>Unesite ime korisnika:</label>
+            <br>
+            <input id="firstName" type="text" placeholder="Ime...">
+            <br>
+            <label>Unesite prezime korisnika:</label>
+            <br>
+            <input id="lastName" type="text" placeholder="Prezime...">
+            <br>
+            <label>Unesite korisničko ime korisnika:</label>
+            <br>
+            <input id="usrName" type="text" placeholder="Korisničko ime...">
+            <br>
+            <label>Izaberite ulogu:</label>
+            <br>
+            <select id='addUserRole'>
+                <option value="manager">Menadžer</option>
+                <option value="seller">Prodavac</option>
+            </select>
+            <br>
+            <label>Unesite šifru korisnika:</label>
+            <br>
+            <input id="password" type="password" placeholder="Šifra...">
+            <br>
+            <label>Unesite avatar za korisnika:</label>
+            <br>
+            <input id='addAvatar' type="file" class="inputFile" name="img" accept="image/*">
+            <br>
+            <button class="modalButton" onclick="closeModal('addModal')">Odustani</button>
+            <button class="modalButton" onclick="addUser()">Sačuvaj</button>
+        </div>
+    </div>
+    <!-- END ADD MODAL -->
+    <!-- EDIT MODAL -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span style="display: none" id="editUserID" value=""></span>
+            <h2 style="text-align: center">Uređivanje korisnika</h2>
+            <label>Unesite ime korisnika:</label>
+            <br>
+            <input id="editFname" type="text" placeholder="Ime...">
+            <br>
+            <label>Unesite prezime korisnika:</label>
+            <br>
+            <input id="editLname" type="text" placeholder="Prezime...">
+            <br>
+            <label>Unesite korisničko ime korisnika:</label>
+            <br>
+            <input id="editUsrname" type="text" placeholder="Korisničko ime..." disabled>
+            <br>
+            <select id='editUserRole'>
+                <option value="manager">Menadžer</option>
+                <option value="seller">Prodavac</option>
+            </select>
+            <br>
+            <label>Unesite šifru korisnika:</label>
+            <br>
+            <input id='editPassword' type="password" placeholder="Šifra...">
+            <br>
+            <label>Unesite avatar za korisnika:</label>
+            <br>
+            <input id='editAvatar' type="file" class="inputFile" name="img" accept="image/*">
+            <br>
+            <button class="modalButton" onclick="closeModal('editModal')">Odustani</button>
+            <button id='editButton' class="modalButton" onclick="edit()">Izmeni</button>
+        </div>
+        <!-- END EDIT MODAL -->
+        <script src="../scripts/usersController.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+[
+  {
+    "hallID": "A1",
+    "movieID": 1,
+    "dateTime": "07/02/2018 18:00",
+    "price": 325,
+    "deleted": false,
+    "imageName": "Taken.jpg",
+    "id": 1,
+    "seat_available": 57
+  },
+  {
+    "hallID": "A2",
+    "movieID": 4,
+    "dateTime": "07/02/2018 17:45",
+    "price": 395,
+    "deleted": false,
+    "imageName": "Bridesmaids.jpg",
+    "id": 2,
+    "seat_available": 35
+  },
+  {
+    "hallID": "A3",
+    "movieID": 2,
+    "dateTime": "07/02/2018 18:30",
+    "price": 350.5,
+    "deleted": true,
+    "imageName": "Skiptrace.jpg",
+    "id": 3,
+    "seat_available": 55
+  },
+  {
+    "hallID": "A2",
+    "movieID": 5,
+    "dateTime": "07/02/2018 20:00",
+    "price": 320,
+    "deleted": false,
+    "imageName": "Home Alone.jpg",
+    "id": 4,
+    "seat_available": 45
+  },
+  {
+    "hallID": "A4",
+    "movieID": 6,
+    "dateTime": "07/02/2018 19:00",
+    "price": 290,
+    "deleted": false,
+    "imageName": "The Godfather.jpg",
+    "id": 5,
+    "seat_available": 30
+  },
+  {
+    "hallID": "A1",
+    "movieID": 2,
+    "dateTime": "08/02/2018 18:45",
+    "price": 320,
+    "deleted": false,
+    "imageName": "Skiptrace.jpg",
+    "id": 6,
+    "seat_available": 60
+  },
+  {
+    "hallID": "A3",
+    "movieID": 1,
+    "dateTime": "07/02/2018 20:30",
+    "price": 350,
+    "deleted": false,
+    "imageName": "Taken2.jpg",
+    "id": 7,
+    "seat_available": 55
+  },
+  {
+    "hallID": "A4",
+    "movieID": 4,
+    "dateTime": "07/02/2018 16:30",
+    "price": 360,
+    "deleted": false,
+    "imageName": "Bridesmaids.jpg",
+    "id": 8,
+    "seat_available": 30
+  },
+  {
+    "hallID": "A4",
+    "movieID": 8,
+    "dateTime": "23/02/2018 12:30",
+    "price": 750,
+    "deleted": false,
+    "imageName": "Foreigner.jpg",
+    "id": 9,
+    "seat_available": 30
+  }
+]

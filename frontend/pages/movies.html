@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Filmovi</title>
+    <link rel="stylesheet" type="text/css" href="../styles/navBar.css">
+    <link rel="stylesheet" type="text/css" href="../styles/moviesPage.css">
+    <link rel="icon" href="../images/projectimage.jpg">
+    <script>
+        var manager = document.cookie.startsWith('manager');
+        if (!manager) {
+            window.location.href = "401.html"
+        }
+    </script>
+</head>
+
+<body onkeyup='checkKey(event)'>
+    <div id="navBar">
+        <ul>
+
+            <li>
+                <a id="events" href="eventsToSell.html">Projekcije</a>
+            </li>
+            <li>
+                <a id="allEvents" href="allEvents.html">Sve projekcije</a>
+            </li>
+            <li>
+                <a class="active" id="movies" href="movies.html">Filmovi</a>
+            </li>
+            <li>
+                <a id="users" href="users.html">Korisnici</a>
+            </li>
+            <li class="dropdown">
+                <div class='loginData'>
+                    <img class="userAvatar" id="userAvatar" src="#">
+                    <a id="username" class="dropbtn"> </a>
+                </div>
+                <div class="dropdown-content">
+                    <a onclick="logout()">Odjavi se</a>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <input type="text" class='search' id="movieSearch" onkeyup="search()" placeholder="Traži po imenu, žanru..." title="Unesi ime, žanr">
+    <div id="content" class="content">
+        <table id="moviesTable">
+            <tr>
+                <th>Ime filma</th>
+                <th>Žanr</th>
+                <th>Trajanje (min)</th>
+                <th>Youtoube ID</th>
+                <th>Upravljanje</th>
+            </tr>
+        </table>
+    </div>
+    <button class="addButton" id="addBtn" onclick="openModal('addModal')">+</button>
+    <!-- ADD MODAL -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <h2 style="text-align: center">Dodavanje filma</h2>
+            <label>Unesite ime filma:</label>
+            <br>
+            <input type="text" placeholder="Ime.." id='addMovieName'>
+            <br>
+            <label>Unesite žanr filma:</label>
+            <br>
+            <input type="text" placeholder="Žanr..." id='addMovieType'>
+            <br>
+            <label>Unesite trajanje filma:</label>
+            <br>
+            <input type="number" min="0" placeholder="Trajanje.." id='addMovieDuration'>
+            <br>
+            <label>Unesite ID trajlera filma sa youtube-a:</label>
+            <br>
+            <input type="text" placeholder="Trajler..." id='addMovieTrailer'>
+            <br>
+            <button class="modalButton" onclick="closeModal('addModal')">Odustani</button>
+            <button class="modalButton" onclick="add()">Sačuvaj</button>
+        </div>
+    </div>
+    <!-- END ADD MODAL -->
+    <!-- EDIT MODAL -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2 style="text-align: center">Uređivanje filma</h2>
+            <label>Unesite ime filma:</label>
+            <br>
+            <input type="text" placeholder="Ime.." id='editMovieName'>
+            <br>
+            <label>Unesite žanr filma:</label>
+            <br>
+            <input type="text" placeholder="Žanr..." id='editMovieType'>
+            <br>
+            <label>Unesite trajanje filma:</label>
+            <br>
+            <input type="number" min="0" placeholder="Trajanje.." id='editMovieDuration'>
+            <br>
+            <label>Unesite ID trajlera filma sa youtube-a:</label>
+            <br>
+            <input type="text" placeholder="Trajler..." id='editMovieTrailer'>
+            <br>
+            <button class="modalButton" onclick="closeModal('editModal')">Odustani</button>
+            <button id='editButton' class="modalButton" onclick='edit()'>Izmeni</button>
+        </div>
+        <!-- END EDIT MODAL -->
+        <script src="../scripts/moviesController.js"></script>
+</body>
+
+</html>

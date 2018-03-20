@@ -1,0 +1,105 @@
+body {
+    width: 82%;
+    margin-top: 3%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: dodgerblue;
+    width: 100%;
+    box-shadow: 1px 1px 1px 2px rgb(176, 177, 177);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#navBar li {
+    float: left;
+}
+
+#navBar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#navBar li a:hover:not(.active) {
+    color: white;
+    border-bottom: 3px solid rgb(218, 33, 33);
+}
+
+#navBar li a.active {
+    color: white;
+    border-bottom: 3px solid rgb(218, 33, 33);
+}
+
+#navBar .dropdown {
+    margin-right: 0.01%;
+    float: right;
+    width: 141px;
+}
+
+#navBar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 142px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#navBar .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    text-align: center;
+}
+
+#navBar .dropdown-content a:hover {
+    color: red;
+    background-color: rgb(218, 33, 33);
+}
+
+#navBar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search {
+    background-image: url('../images/search.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.errorMsg {
+    text-align: center;
+    color: rgb(218, 33, 33);
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+#navBar li .loginData .userAvatar {
+    width: 30%;
+    height: 2%;
+    padding-top:1.5%;
+}
+
+#navBar li .loginData{
+    display: flex;
+    flex-direction: row;
+}

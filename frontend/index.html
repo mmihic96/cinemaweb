@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prijavljivanje</title>
+    <!-- IMPORT STYLE -->
+    <link rel="stylesheet" type="text/css" href="styles/loginPage.css">
+    <!-- END IMPORT STYLE -->
+    <link rel="icon" href="./images/projectimage.jpg">
+</head>
+
+<body>
+    <dv class="container">
+        <div class="imgcontainer">
+            <img src="images/avatar-login.jpg" alt="Avatar" class="avatar" id='avatar'>
+            <br>
+            <br>
+            <label id='message'></label>
+            <br>
+        </div>
+        <div class="loginForm">
+            <label>
+                <b>Korisničko ime</b>
+            </label>
+            <input type="text" placeholder="Unesite korisničko ime" id="username" required>
+            <label>
+                <b>Šifra</b>
+            </label>
+            <input type="password" placeholder="Unesite šifru" id="password" required>
+            <button id="loginBtn" type="submit" onclick="login()">Prijavite se</button>
+        </div>
+    </dv>
+    <!-- IMPORT SCRIPT -->
+    <script src="scripts/loginController.js"></script>
+    <!-- END IMPORT SCRIPT -->
+</body>
+
+</html>

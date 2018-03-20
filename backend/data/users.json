@@ -1,0 +1,38 @@
+[
+  {
+    "fname": "Milos",
+    "lname": "Mihic",
+    "username": "mmihic",
+    "password": "1234",
+    "role": "manager",
+    "avatar": "26349162_170208_2033_9qr0xh.png",
+    "id": 1
+  },
+  {
+    "fname": "Aleksandra",
+    "lname": "Krsic",
+    "username": "akrsic",
+    "password": "1234",
+    "role": "manager",
+    "avatar": "Avatar_ona1.png",
+    "id": 2
+  },
+  {
+    "fname": "Marko",
+    "lname": "Stanojevic",
+    "username": "drmarko",
+    "password": "1234",
+    "role": "seller",
+    "avatar": "Avatar_on2.png",
+    "id": 3
+  },
+  {
+    "fname": "Svetlana",
+    "lname": "Sljuka",
+    "username": "ssljuka",
+    "password": "1234",
+    "role": "seller",
+    "avatar": "Avatar_ona2.png",
+    "id": 4
+  }
+]

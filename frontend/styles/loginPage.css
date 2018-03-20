@@ -1,0 +1,71 @@
+body,
+html {
+    overflow: hidden;
+    margin: 0;
+    background-image: url("../images/login-background.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+.backgroundImage {
+    width: 150px;
+}
+
+.container {
+    border-style: outset;
+    border-width: 7px;
+    border-color: dodgerblue;
+    background-color: #e7e7e7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(233, 232, 232);
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid dodgerblue;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: 2px solid dodgerblue;
+}
+
+button {
+    background-color: white;
+    color: dodgerblue;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:focus {
+    outline: 2px solid dodgerblue
+}
+
+button:hover {
+    background-color: dodgerblue;
+    opacity: 0.5;
+    color: white;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 25%;
+    border-radius: 50%;
+}
+
+.loginForm {
+    padding: 16px;
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "id": "A1",
+        "seatAvailable": 60
+    },
+    {
+        "id": "A2",
+        "seatAvailable": 45
+    },
+    {
+        "id": "A3",
+        "seatAvailable": 55
+    },
+    {
+        "id": "A4",
+        "seatAvailable": 30
+    }
+]

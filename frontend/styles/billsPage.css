@@ -1,0 +1,31 @@
+.content {
+    width: 100%;
+    box-shadow: 1px 1px 1px 2px rgb(176, 177, 177);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+table {
+    color: rgb(102, 101, 101);
+    text-align: center;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+th {
+    color: rgb(218, 33, 33);
+}
+
+.search {
+    width: 95.8%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-top:8px;
+    margin-bottom: 12px;
+}

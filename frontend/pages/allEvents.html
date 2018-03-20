@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Projekcije</title>
+    <link rel="stylesheet" type="text/css" href="../styles/navBar.css">
+    <link rel="stylesheet" type="text/css" href="../styles/allEventsPage.css">
+    <link rel="icon" href="../images/projectimage.jpg">
+    <script>
+        var manager = document.cookie.startsWith('manager');
+        if (!manager) {
+            window.location.href = "401.html"
+        }
+    </script>
+</head>
+
+<body onkeyup='checkKey(event)'>
+    <div id="navBar">
+        <ul>
+            <li>
+                <a id="events" href="eventsToSell.html">Projekcije</a>
+            </li>
+            <li>
+                <a class="active" id="allEvents" href="allEvents.html">Sve projekcije</a>
+            </li>
+            <li>
+                <a id="movies" href="movies.html">Filmovi</a>
+            </li>
+            <li>
+                <a id="users" href="users.html">Korisnici</a>
+            </li>
+            <li class="dropdown">
+                <div class='loginData'>
+                    <img class="userAvatar" id="userAvatar" src="#">
+                    <a id="username" class="dropbtn"> </a>
+                </div>
+                <div class="dropdown-content">
+                    <a onclick="logout()">Odjavi se</a>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <input type="text" class='search' id="eventsSearch" onkeyup="search()" placeholder="Traži po imenu, žanru, sali..." title="Unesi ime, žanr, salu">
+    <div id="content" class="content">
+        <table id="eventsTable">
+            <tr>
+                <th>ID sale</th>
+                <th>Ime filma</th>
+                <th>Vreme projekcije</th>
+                <th>Trajanje (min)</th>
+                <th>Cena</th>
+                <th>Žanr</th>
+                <th>Broj mesta</th>
+                <th>Obrisana</th>
+                <th>Upravljanje</th>
+            </tr>
+        </table>
+    </div>
+    <button class="addButton" id="addBtn" onclick="openModal('addModal')">+</button>
+    <!-- ADD MODAL -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <h2 style="text-align: center">Dodavanje projekcije</h2>
+            <label>Izaberite film za projekciju:</label>
+            <br>
+            <select id='addMovieOption'>
+            </select>
+            <br>
+            <label>Izaberite salu za projekciju:</label>
+            <br>
+            <select id='addHallOption'>
+            </select>
+            <br>
+            <label>Izaberite vreme početka projekcije:</label>
+            <br>
+            <input id='addDate' type="date" /> u
+            <input id='addTime' type='time' />
+            <br>
+            <label>Unesite cenu karte za projekciju:</label>
+            <br>
+            <input id='addPrice' type='number' min='0' placeholder="Unesite cenu..." />
+            <label> RSD</label>
+            <br>
+            <label>Unesite poster za projekciju:</label>
+            <br>
+            <input id='addImage' type="file" class="inputFile" name="img" accept="image/*">
+            <p id="addErrorMessage">
+
+            </p>
+            <button class="modalButton" onclick="closeModal('addModal')">Odustani</button>
+            <button class="modalButton" onclick="add()">Sačuvaj</button>
+        </div>
+    </div>
+    <!-- END ADD MODAL -->
+    <!-- EDIT MODAL -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2 style="text-align: center">Uredjivanje projekcije</h2>
+            <label>Izaberite film za projekciju:</label>
+            <br>
+            <select id='editMovieOption'>
+            </select>
+            <br>
+            <label>Izaberite salu za projekciju:</label>
+            <br>
+            <select id='editHallOption'>
+            </select>
+            <br>
+            <label>Izaberite vreme početka projekcije:</label>
+            <br>
+            <input id='editDate' type="date" /> u
+            <input id='editTime' type='time' />
+            <br>
+            <label>Unesite cenu karte za projekciju:</label>
+            <br>
+            <input id='editPrice' type='number' min='0' placeholder="Unesite cenu..." />
+            <label> RSD</label>
+            <br>
+            <label>Unesite poster za projekciju:</label>
+            <br>
+            <input id='editImage' type="file" class="inputFile" name="img" accept="image/*">
+            <br>
+            <button class="modalButton" onclick="closeModal('editModal')">Odustani</button>
+            <button id='editButton' class="modalButton" onclick="edit()">Izmeni</button>
+        </div>
+        <!-- END EDIT MODAL -->
+        <script src='../scripts/allEventsController.js'></script>
+</body>
+
+</html>
